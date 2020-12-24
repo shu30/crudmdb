@@ -3,6 +3,12 @@ const MongoClient    = require('mongodb').MongoClient;
 const bodyParser     = require('body-parser');
 //const db             = require('./config/db');
 const app            = express();
+var path = require('path');
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'app/views'));
+app.set('view engine', 'ejs');
 
 
 const port = 3000;

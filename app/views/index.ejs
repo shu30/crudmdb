@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>
+      <ul>
+             <% for(var i=0; i<results.length;i++) {%>
+                 <li><%= results[i].title %>: <i><%= results[i].text %></i>
+                   <a href="notes/delete/<%= results[i]._id %>" >удалить</a>
+                 </li>
+             <%} %>
+         </ul>
+    </p>
+    <form method="post" action="" >
+      <input type=text name="title" ><br>
+      <textarea name="body" rows="8" cols="80"></textarea><br>
+      <input type=submit value="отправить" >
+    </form>
+  </body>
+</html>
